@@ -1,0 +1,34 @@
+[
+    {
+        "name": "naveen",
+        "city": "Bangalore"
+    },
+    {
+        "name": "Shailesh",
+        "city": "Delhi",
+        "designation": "SDET"
+    },
+    {
+        "name": "Revathy",
+        "city": "Pune",
+        "language": [
+            "Java, JavaScript"
+        ]
+    },
+    {
+        "firstname": "Dhananjay",
+        "lastname": "Kumar",
+        "totalprice": 111,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    },
+    {
+        "firstname": "Priyanka",
+        "totalAmount": 111,
+        "additionalneeds": "Breakfast"
+    }
+]

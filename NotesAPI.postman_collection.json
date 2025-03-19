@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "daf3b0c4-324b-4275-9c73-d21360048cef",
+		"name": "NotesAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "732190"
+	},
+	"item": [
+		{
+			"name": "GETAPIs",
+			"item": [
+				{
+					"name": "GETALLNotes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://65.0.80.58:8080/api/notes",
+							"protocol": "http",
+							"host": [
+								"65",
+								"0",
+								"80",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Note By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://65.0.80.58:8080/api/notes/763",
+							"protocol": "http",
+							"host": [
+								"65",
+								"0",
+								"80",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notes",
+								"763"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POSTAPIs",
+			"item": [
+				{
+					"name": "Create a Note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://65.0.80.58:8080/api/notes",
+							"protocol": "http",
+							"host": [
+								"65",
+								"0",
+								"80",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUTAPIs",
+			"item": [
+				{
+					"name": "Update a Note",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Cypress Automation Notes\",\n    \"content\": \"this is my Cypress note\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://65.0.80.58:8080/api/notes/896",
+							"protocol": "http",
+							"host": [
+								"65",
+								"0",
+								"80",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notes",
+								"896"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeleteAPIs",
+			"item": [
+				{
+					"name": "Delete a User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://65.0.80.58:8080/api/notes/757",
+							"protocol": "http",
+							"host": [
+								"65",
+								"0",
+								"80",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notes",
+								"757"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

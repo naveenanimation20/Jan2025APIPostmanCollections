@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GoRestAPIWorkflow" tests="6" time="3.116">
+  <testsuite name="1-GetAllUsers" id="74603532-ce5c-4123-8534-3102afb5c6e5" timestamp="2025-02-20T14:41:21.696Z" tests="1" failures="0" errors="0" time="1.079">
+    <testcase name="Status code is 200" time="1.079" classname="1GetAllUsers"/>
+  </testsuite>
+  <testsuite name="2-CreateAUser" id="594eedaa-52be-43a1-acc0-e077e1274e51" timestamp="2025-02-20T14:41:21.696Z" tests="3" failures="0" errors="0" time="0.432">
+    <testcase name="Status code is 201" time="0.432" classname="2CreateAUser"/>
+    <testcase name="check user name is seema" time="0.432" classname="2CreateAUser"/>
+    <testcase name="Content-Type is present" time="0.432" classname="2CreateAUser"/>
+  </testsuite>
+  <testsuite name="3-GetAUserByID" id="c7f04479-fb13-41ad-b7a5-f04d0441d8c4" timestamp="2025-02-20T14:41:21.696Z" tests="2" failures="0" errors="0" time="0.397">
+    <testcase name="Status code is 200" time="0.397" classname="3GetAUserById"/>
+    <testcase name="check userID is correct" time="0.397" classname="3GetAUserById"/>
+  </testsuite>
+  <testsuite name="4-UpdateAUserByID" id="ebc6de5b-9c97-409c-a8ac-fa275f53f611" timestamp="2025-02-20T14:41:21.696Z" tests="3" failures="1" errors="0" time="0.402">
+    <testcase name="Status code is 200" time="0.402" classname="4UpdateAUserById"/>
+    <testcase name="Response time is less than 5000ms" time="0.402" classname="4UpdateAUserById"/>
+    <testcase name="Your test name" time="0.402" classname="4UpdateAUserById">
+      <failure type="AssertionFailure" message="expected 'active' to deeply equal 'inactive'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 243c4c87-937d-4bf2-803b-b7455b8c472c.]]>
+        <![CDATA[Collection name: GoRestAPIWorkflow.]]>
+        <![CDATA[Request name: 4-UpdateAUserByID.]]>
+        <![CDATA[Test description: Your test name.]]>
+        <![CDATA[Error message: expected 'active' to deeply equal 'inactive'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'active' to deeply equal 'inactive'
+   at Object.eval sandbox-script.js:3:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="5-DeleteAUserByID" id="499ecb9f-786b-4b06-9e7a-cd41ead9fffb" timestamp="2025-02-20T14:41:21.696Z" tests="1" failures="0" errors="0" time="0.416">
+    <testcase name="Status code is 204" time="0.416" classname="5DeleteAUserById"/>
+  </testsuite>
+  <testsuite name="6-GetAUserByID" id="50c82ed2-f55a-4f59-a494-c1816bbb9174" timestamp="2025-02-20T14:41:21.696Z" tests="1" failures="0" errors="0" time="0.390">
+    <testcase name="Status code is 404" time="0.390" classname="6GetAUserById"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,107 @@
+[
+    {
+        "companyId": 10101,
+        "regionId": 36554,
+        "filters": [
+            {
+                "id": 101,
+                "name": "VENDOR",
+                "isAllowed": false
+            },
+            {
+                "id": 102,
+                "name": "COUNTRY",
+                "isAllowed": true
+            },
+            {
+                "id": 103,
+                "name": "MANUFACTURER",
+                "isAllowed": false
+            }
+        ]
+    },
+    {
+        "companyId": 10102,
+        "regionId": 36555,
+        "filters": [
+            {
+                "id": 101,
+                "name": "VENDOR",
+                "isAllowed": false
+            },
+            {
+                "id": 102,
+                "name": "COUNTRY",
+                "isAllowed": true
+            },
+            {
+                "id": 103,
+                "name": "MANUFACTURER",
+                "isAllowed": false
+            }
+        ]
+    },
+    {
+        "companyId": 10103,
+        "regionId": 36556,
+        "filters": [
+            {
+                "id": 104,
+                "name": "CATEGORY",
+                "isAllowed": true
+            },
+            {
+                "id": 105,
+                "name": "BRAND",
+                "isAllowed": false
+            },
+            {
+                "id": 106,
+                "name": "TYPE",
+                "isAllowed": true
+            }
+        ]
+    },
+    {
+        "companyId": 10104,
+        "regionId": 36557,
+        "filters": [
+            {
+                "id": 107,
+                "name": "PRICE",
+                "isAllowed": true
+            },
+            {
+                "id": 108,
+                "name": "RATING",
+                "isAllowed": false
+            },
+            {
+                "id": 109,
+                "name": "AVAILABILITY",
+                "isAllowed": true
+            }
+        ]
+    },
+    {
+        "companyId": 10105,
+        "regionId": 36558,
+        "filters": [
+            {
+                "id": 110,
+                "name": "DISCOUNT",
+                "isAllowed": true
+            },
+            {
+                "id": 111,
+                "name": "PROMOTION",
+                "isAllowed": false
+            },
+            {
+                "id": 112,
+                "name": "NEW_ARRIVAL",
+                "isAllowed": true
+            }
+        ]
+    }
+]
