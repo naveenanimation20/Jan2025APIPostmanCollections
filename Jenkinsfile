@@ -14,35 +14,72 @@ pipeline {
             }
         }
 
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/naveenanimation20/July2024PostmanCollections'
+        
+
+        stage('Pull Docker Images') {
+            parallel {
+                stage('Pull GoRest Image') {
+                    steps {
+                        sh 'docker pull naveenkhunteta/gorestddtest:1.0'
+                    }
+                }
+                stage('Pull Booking Image') {
+                    steps {
+                        sh 'docker pull naveenkhunteta/mybookingapi:1.0'
+                    }
+                }
             }
         }
 
-        stage('Pull Docker Image') {
+        stage('Prepare Newman Results Directory') {
             steps {
-                sh 'docker pull naveenkhunteta/gorestddtest:1.0'
+                sh 'mkdir -p $(pwd)/newman' 
             }
         }
 
-        stage('Run API Test Cases') {
-            steps {
-                sh 'docker run -v $(pwd)/newman:/app/results naveenkhunteta/gorestddtest:1.0'
+        stage('Run API Test Cases in Parallel') {
+            parallel {
+                stage('Run GoRest Tests') {
+                    steps {
+                        sh 'docker run --rm -v $(pwd)/newman:/app/results naveenkhunteta/gorestddtest:1.0'
+                    }
+                }
+                stage('Run Booking Tests') {
+                    steps {
+                        sh 'docker run --rm -v $(pwd)/newman:/app/results naveenkhunteta/mybookingapi:1.0'
+                    }
+                }
             }
         }
 
-        stage('Publish HTML Extra Report') {
-            steps {
-                publishHTML([
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: 'newman',
-                    reportFiles: 'gorest.html',
-                    reportName: 'HTML Extra API Report',
-                    reportTitles: ''
-                ])
+        stage('Publish HTML Extra Reports') {
+            parallel {
+                stage('Publish GoRest Report') {
+                    steps {
+                        publishHTML([
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: false,
+                            keepAll: true,
+                            reportDir: 'newman',
+                            reportFiles: 'gorest.html',
+                            reportName: 'GoRest API Report',
+                            reportTitles: ''
+                        ])
+                    }
+                }
+                stage('Publish Booking Report') {
+                    steps {
+                        publishHTML([
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: false,
+                            keepAll: true,
+                            reportDir: 'newman',
+                            reportFiles: 'booking.html',
+                            reportName: 'Booking API Report',
+                            reportTitles: ''
+                        ])
+                    }
+                }
             }
         }
 
