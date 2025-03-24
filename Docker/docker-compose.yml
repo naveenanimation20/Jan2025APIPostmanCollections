@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  gorest:
+    image: naveenkhunteta/gorestddtest:1.0
+    volumes:
+      - ./results:/app/results
+
+  booking:
+    image: naveenkhunteta/mybookingapi:1.0
+    volumes:
+      - ./results:/app/results
